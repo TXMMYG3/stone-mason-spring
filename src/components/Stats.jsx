@@ -63,7 +63,8 @@ const stats = [
 
 const Stats = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+    <section className="py-20 px-4 bg-black">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
       {stats.map((stat, index) => {
         const Icon = stat.icon;
         return (
@@ -96,10 +97,12 @@ const Stats = () => {
           </motion.div>
         );
       })}
-    </div>
+      </div>
+    </section>
   );
 };
 
 export default memo(Stats);
+
 
 

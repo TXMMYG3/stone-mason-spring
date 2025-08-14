@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation.jsx';
+import Hero from './components/Hero.jsx';
 import Stats from './components/Stats.jsx';
 
 // Lazy load components for better performance
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
+              <Hero />
               <Stats />
               <Suspense fallback={<Loading />}>
                 <Reviews />
@@ -56,4 +58,7 @@ function App() {
 }
 
 export default App;
+
+
+
 
