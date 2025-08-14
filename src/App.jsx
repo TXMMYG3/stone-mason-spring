@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation.jsx';
 import Hero from './components/Hero.jsx';
 import Stats from './components/Stats.jsx';
+import PoolsShowcase from './components/PoolsShowcase.jsx';
+import SpasShowcase from './components/SpasShowcase.jsx';
 
 // Lazy load components for better performance
 const Reviews = lazy(() => import('./components/Reviews.jsx'));
@@ -28,6 +30,8 @@ function App() {
             <>
               <Hero />
               <Stats />
+              <PoolsShowcase />
+              <SpasShowcase />
               <Suspense fallback={<Loading />}>
                 <Reviews />
               </Suspense>
