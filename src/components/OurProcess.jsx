@@ -16,21 +16,21 @@ const OurProcess = () => {
       title: 'Design & Planning',
       description: 'Our expert designers create detailed 3D renderings and plans, collaborating closely with you to refine every aspect until it\'s perfect.',
       icon: Palette,
-      color: 'from-purple-600 to-pink-600'
+      color: 'from-blue-600 to-cyan-600'
     },
     {
       number: '3',
       title: 'Construction',
       description: 'Our skilled craftsmen bring your design to life with meticulous attention to detail, using only the finest materials and construction techniques.',
       icon: Hammer,
-      color: 'from-orange-600 to-red-600'
+      color: 'from-blue-600 to-cyan-600'
     },
     {
       number: '4',
       title: 'Enjoyment',
       description: 'Experience the joy of your completed outdoor sanctuary, backed by our comprehensive support and maintenance services for years to come.',
       icon: Heart,
-      color: 'from-green-600 to-emerald-600'
+      color: 'from-blue-600 to-cyan-600'
     }
   ];
 
@@ -129,3 +129,4 @@ const OurProcess = () => {
 };
 
 export default OurProcess;
+

@@ -35,10 +35,10 @@ function App() {
               <PoolsShowcase />
               <SpasShowcase />
               <OurProcess />
-              <ConnectWithUs />
               <Suspense fallback={<Loading />}>
                 <Reviews />
               </Suspense>
+              <ConnectWithUs />
             </>
           } />
           
