@@ -4,7 +4,7 @@ import { Phone, Mail, Facebook, Youtube, ExternalLink } from 'lucide-react';
 
 const ConnectWithUs = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+         <section className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -14,11 +14,9 @@ const ConnectWithUs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-              Connect With Us
-            </span>
-          </h2>
+                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+             Connect With Us
+           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to start your dream project? Get in touch with us today. We're here to bring your vision to life.
           </p>
@@ -136,7 +134,7 @@ const ConnectWithUs = () => {
             href="https://cal.com/stonemason-of-spring/15min" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                         className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             <span>Schedule Consultation</span>
             <ExternalLink size={20} />
