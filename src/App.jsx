@@ -5,6 +5,7 @@ import Hero from './components/Hero.jsx';
 import Stats from './components/Stats.jsx';
 import PoolsShowcase from './components/PoolsShowcase.jsx';
 import SpasShowcase from './components/SpasShowcase.jsx';
+import OurProcess from './components/OurProcess.jsx';
 import ConnectWithUs from './components/ConnectWithUs.jsx';
 
 // Lazy load components for better performance
@@ -33,6 +34,7 @@ function App() {
               <Stats />
               <PoolsShowcase />
               <SpasShowcase />
+              <OurProcess />
               <ConnectWithUs />
               <Suspense fallback={<Loading />}>
                 <Reviews />
