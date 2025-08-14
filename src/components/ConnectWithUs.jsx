@@ -1,0 +1,150 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Phone, Mail, Facebook, Youtube, ExternalLink } from 'lucide-react';
+
+const ConnectWithUs = () => {
+  return (
+    <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+              Connect With Us
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to start your dream project? Get in touch with us today. We're here to bring your vision to life.
+          </p>
+        </motion.div>
+
+        {/* Contact Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Phone */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+          >
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone size={28} className="text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              <a 
+                href="tel:281-363-4102" 
+                className="text-blue-400 hover:text-blue-300 text-lg font-medium transition-colors duration-300"
+              >
+                281-363-4102
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Email */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+          >
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail size={28} className="text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <a 
+                href="mailto:stonemasonofspring@gmail.com" 
+                className="text-purple-400 hover:text-purple-300 text-lg font-medium transition-colors duration-300 break-all"
+              >
+                stonemasonofspring@gmail.com
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Facebook */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-blue-500/20 to-blue-700/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+          >
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Facebook size={28} className="text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Follow Us</h3>
+              <a 
+                href="https://www.facebook.com/stonemasonodspringtexas/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 text-lg font-medium transition-colors duration-300 flex items-center justify-center gap-2"
+              >
+                Facebook
+                <ExternalLink size={16} />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* YouTube */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-red-600/20 to-red-800/20 backdrop-blur-sm rounded-2xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
+          >
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Youtube size={28} className="text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Watch Us</h3>
+              <a 
+                href="https://www.youtube.com/@stonemason6102" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-red-400 hover:text-red-300 text-lg font-medium transition-colors duration-300 flex items-center justify-center gap-2"
+              >
+                YouTube
+                <ExternalLink size={16} />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <p className="text-gray-300 mb-8 text-lg">
+            Ready to start your project? Schedule a consultation today!
+          </p>
+          <a 
+            href="https://cal.com/stonemason-of-spring/15min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            <span>Schedule Consultation</span>
+            <ExternalLink size={20} />
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default ConnectWithUs;

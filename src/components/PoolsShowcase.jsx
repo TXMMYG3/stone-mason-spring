@@ -106,9 +106,14 @@ const PoolsShowcase = () => {
           <p className="text-gray-300 mb-6">
             Ready to create your dream pool? Let's discuss your vision.
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+          <a 
+            href="https://cal.com/stonemason-of-spring/15min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+          >
             Start Your Project
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

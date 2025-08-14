@@ -106,9 +106,14 @@ const SpasShowcase = () => {
           <p className="text-gray-300 mb-6">
             Ready to add the perfect spa to your outdoor space?
           </p>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+          <a 
+            href="https://cal.com/stonemason-of-spring/15min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+          >
             Design Your Spa
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
