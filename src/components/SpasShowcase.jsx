@@ -41,10 +41,10 @@ const SpasShowcase = () => {
               Relaxing Spas
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Unwind in luxury with our custom-designed spas. Perfect for relaxation and creating 
-            the ultimate outdoor retreat experience.
-          </p>
+                           <p className="text-xl text-gray-300 max-w-3xl mx-auto italic">
+                   Unwind in luxury with our custom-designed spas. Perfect for relaxation and creating 
+                   the ultimate outdoor retreat experience.
+                 </p>
         </motion.div>
 
         {/* Slideshow Container */}
@@ -106,14 +106,14 @@ const SpasShowcase = () => {
           <p className="text-gray-300 mb-6">
             Ready to add the perfect spa to your outdoor space?
           </p>
-          <a 
-            href="https://cal.com/stonemason-of-spring/15min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            Design Your Spa
-          </a>
+                           <a 
+                   href="https://cal.com/stonemason-of-spring/15min" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                 >
+                   Start Your Journey Today
+                 </a>
         </motion.div>
       </div>
     </section>

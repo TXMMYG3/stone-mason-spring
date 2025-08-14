@@ -6,16 +6,19 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
-        <img
-          src="/src/Public/Images/Hero_image_Stone.jpg"
-          alt="Stone Mason of Spring - Luxury Pool and Garden Design"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-      </div>
+                   {/* Background Image */}
+             <div className="absolute inset-0 z-0">
+               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+               <motion.img
+                 src="/src/Public/Images/Hero_image_Stone.jpg"
+                 alt="Stone Mason of Spring - Luxury Pool and Garden Design"
+                 className="w-full h-full object-cover"
+                 loading="eager"
+                 initial={{ opacity: 0, scale: 1.1 }}
+                 animate={{ opacity: 1, scale: 1 }}
+                 transition={{ duration: 1.5, ease: "easeOut" }}
+               />
+             </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -33,10 +36,8 @@ const Hero = () => {
                    className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
                  >
                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                     Stone Mason
+                     Stone Mason of Spring
                    </span>
-                   <br />
-                   <span className="text-white">of Spring</span>
                  </motion.h1>
 
                  {/* Subtitle */}
@@ -56,21 +57,27 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
-            <Link
-              to="/gallery"
-              className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2"
-            >
-              <span>View Our Work</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+                               <Link
+                     to="/gallery"
+                     className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2 animate-pulse hover:animate-none"
+                     style={{
+                       boxShadow: '0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(6, 182, 212, 0.3)'
+                     }}
+                   >
+                     <span>View Our Work</span>
+                     <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                   </Link>
 
-            <Link
-              to="/videos"
-              className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm flex items-center space-x-2"
-            >
-              <Play size={20} className="group-hover:scale-110 transition-transform" />
-              <span>Watch Videos</span>
-            </Link>
+                   <Link
+                     to="/videos"
+                     className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm flex items-center space-x-2 animate-pulse hover:animate-none"
+                     style={{
+                       boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'
+                     }}
+                   >
+                     <Play size={20} className="group-hover:scale-110 transition-transform" />
+                     <span>Watch Videos</span>
+                   </Link>
           </motion.div>
 
           

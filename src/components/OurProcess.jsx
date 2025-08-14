@@ -113,15 +113,15 @@ const OurProcess = () => {
           <p className="text-gray-300 mb-6 text-lg">
             Ready to start your journey? Let's begin with step one!
           </p>
-          <a 
-            href="https://cal.com/stonemason-of-spring/15min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-          >
-            <span>Start Your Consultation</span>
-            <MessageSquare size={20} />
-          </a>
+                     <a 
+             href="https://cal.com/stonemason-of-spring/15min" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+           >
+             <span>Start Your Journey Today</span>
+             <MessageSquare size={20} />
+           </a>
         </motion.div>
       </div>
     </section>

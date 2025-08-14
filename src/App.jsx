@@ -6,6 +6,7 @@ import Stats from './components/Stats.jsx';
 import PoolsShowcase from './components/PoolsShowcase.jsx';
 import SpasShowcase from './components/SpasShowcase.jsx';
 import OurProcess from './components/OurProcess.jsx';
+import ReviewsIntro from './components/ReviewsIntro.jsx';
 import ConnectWithUs from './components/ConnectWithUs.jsx';
 
 // Lazy load components for better performance
@@ -35,6 +36,7 @@ function App() {
               <PoolsShowcase />
               <SpasShowcase />
               <OurProcess />
+              <ReviewsIntro />
               <Suspense fallback={<Loading />}>
                 <Reviews />
               </Suspense>

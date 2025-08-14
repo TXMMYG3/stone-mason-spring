@@ -109,12 +109,12 @@ const Stats = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center"
         >
-          <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Three decades of excellence has established us as the premier pool and spa craftsmen in Spring. 
-            With over 800 custom pools and countless satisfied clients, our two-acre nursery provides the perfect 
-            elements to create your personal paradise. When you choose Stone Mason of Spring, you're not just 
-            getting a pool—you're investing in a legacy of artistry, precision, and unparalleled beauty.
-          </p>
+                     <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+             <span className="text-blue-400 font-semibold">Three decades of excellence</span> has established us as the premier pool and spa craftsmen in Spring. 
+             With over <span className="text-blue-400 font-semibold">800 custom pools</span> and countless satisfied clients, our <span className="text-blue-400 font-semibold">two-acre nursery</span> provides the perfect 
+             elements to create your personal paradise. When you choose Stone Mason of Spring, you're not just 
+             getting a pool—you're investing in a legacy of <span className="text-blue-400 font-semibold">artistry, precision, and unparalleled beauty</span>.
+           </p>
         </motion.div>
       </div>
     </section>
