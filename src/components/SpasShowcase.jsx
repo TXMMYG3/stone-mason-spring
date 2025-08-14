@@ -47,21 +47,21 @@ const SpasShowcase = () => {
                  </p>
         </motion.div>
 
-        {/* Slideshow Container */}
-        <div className="relative max-w-4xl mx-auto">
-          <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={currentIndex}
-                src={spaImages[currentIndex]}
-                alt={`Luxury Spa Design ${currentIndex + 1}`}
-                className="w-full h-full object-cover"
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5 }}
-              />
-            </AnimatePresence>
+                       {/* Slideshow Container */}
+               <div className="relative max-w-4xl mx-auto">
+                 <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                   <AnimatePresence mode="wait">
+                     <motion.img
+                       key={currentIndex}
+                       src={spaImages[currentIndex]}
+                       alt={`Luxury Spa Design ${currentIndex + 1}`}
+                       className="w-full h-full object-cover"
+                       initial={{ opacity: 0, x: 100 }}
+                       animate={{ opacity: 1, x: 0 }}
+                       exit={{ opacity: 0, x: -100 }}
+                       transition={{ duration: 0.8, ease: "easeInOut" }}
+                     />
+                   </AnimatePresence>
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

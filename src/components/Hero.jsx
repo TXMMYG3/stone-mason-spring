@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
                    {/* Background Image */}
              <div className="absolute inset-0 z-0">
-               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+               <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90" />
                <motion.img
                  src="/src/Public/Images/Hero_image_Stone.jpg"
                  alt="Stone Mason of Spring - Luxury Pool and Garden Design"
@@ -35,7 +35,7 @@ const Hero = () => {
                    transition={{ duration: 0.8, delay: 0.2 }}
                    className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
                  >
-                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                   <span className="text-white">
                      Stone Mason of Spring
                    </span>
                  </motion.h1>
