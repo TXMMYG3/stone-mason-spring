@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { Phone, Mail, Facebook, Youtube, ExternalLink } from 'lucide-react';
 
 const ConnectWithUs = () => {
   return (
@@ -30,9 +30,12 @@ const ConnectWithUs = () => {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, delay: 0.1 }}
              viewport={{ once: true }}
-             className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+             className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-105"
            >
              <div className="text-center">
+               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                 <Phone size={24} className="text-white" />
+               </div>
                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                <a 
                  href="tel:281-363-4102" 
@@ -49,13 +52,16 @@ const ConnectWithUs = () => {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, delay: 0.2 }}
              viewport={{ once: true }}
-             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+             className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-105"
            >
              <div className="text-center">
+               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                 <Mail size={24} className="text-white" />
+               </div>
                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                <a 
                  href="mailto:stonemasonofspring@gmail.com" 
-                 className="text-purple-400 hover:text-purple-300 text-base font-medium transition-colors duration-300 break-all"
+                 className="text-blue-400 hover:text-blue-300 text-base font-medium transition-colors duration-300 break-all"
                >
                  stonemasonofspring@gmail.com
                </a>
@@ -68,9 +74,12 @@ const ConnectWithUs = () => {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, delay: 0.3 }}
              viewport={{ once: true }}
-             className="bg-gradient-to-br from-blue-500/20 to-blue-700/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+             className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-105"
            >
              <div className="text-center">
+               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                 <Facebook size={24} className="text-white" />
+               </div>
                <h3 className="text-lg font-semibold text-white mb-2">Follow Us</h3>
                <a 
                  href="https://www.facebook.com/stonemasonodspringtexas/" 
@@ -90,15 +99,18 @@ const ConnectWithUs = () => {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, delay: 0.4 }}
              viewport={{ once: true }}
-             className="bg-gradient-to-br from-red-600/20 to-red-800/20 backdrop-blur-sm rounded-xl p-6 border border-red-500/30 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
+             className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-105"
            >
              <div className="text-center">
+               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                 <Youtube size={24} className="text-white" />
+               </div>
                <h3 className="text-lg font-semibold text-white mb-2">Watch Us</h3>
                <a 
                  href="https://www.youtube.com/@stonemason6102" 
                  target="_blank" 
                  rel="noopener noreferrer"
-                 className="text-red-400 hover:text-red-300 text-base font-medium transition-colors duration-300 flex items-center justify-center gap-2"
+                 className="text-blue-400 hover:text-blue-300 text-base font-medium transition-colors duration-300 flex items-center justify-center gap-2"
                >
                  YouTube
                  <ExternalLink size={14} />
