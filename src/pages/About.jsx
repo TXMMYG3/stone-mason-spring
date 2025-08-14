@@ -22,7 +22,7 @@ const About = () => {
                   className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl"
                 >
                   <img 
-                    src="/src/Public/Images/Joe-DiPaulo.jpg" 
+                    src="/Images/Joe-DiPaulo.jpg" 
                     alt="Joe DiPaulo - Founder of Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
                   />
@@ -54,7 +54,7 @@ const About = () => {
                   className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl"
                 >
                   <img 
-                    src="/src/Public/Images/Tammy-Barnett.jpeg" 
+                    src="/Images/Tammy-Barnett.jpeg" 
                     alt="Tammy Barnett - Owner/Operator of Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
                   />
@@ -86,7 +86,7 @@ const About = () => {
                   className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl"
                 >
                   <img 
-                    src="src/Public/Images/Aurelio.jpeg" 
+                    src="/Images/Aurelio.jpeg" 
                     alt="Aurelio - Foreman at Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
                   />

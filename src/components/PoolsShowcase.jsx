@@ -6,10 +6,10 @@ const PoolsShowcase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const poolImages = [
-    '/src/Public/Images/Pool_Images/IMG 1101-10 4a FINAL WEB) Luxury Pool - View From Spa Falls 0292013.jpg',
-    '/src/Public/Images/Pool_Images/IMG 1816-1830 4b) St Lauren Water World 012810.jpg',
-    '/src/Public/Images/Pool_Images/IMG34532-34 4 FINAL Resize to 159 RATIO Zen SS)  Bedrrom Veiw II 722014.jpg',
-    '/src/Public/Images/Pool_Images/WEB Image 1 Stone Mason - Living Magazine.jpg'
+    '/Images/Pool_Images/IMG 1101-10 4a FINAL WEB) Luxury Pool - View From Spa Falls 0292013.jpg',
+    '/Images/Pool_Images/IMG 1816-1830 4b) St Lauren Water World 012810.jpg',
+    '/Images/Pool_Images/IMG34532-34 4 FINAL Resize to 159 RATIO Zen SS)  Bedrrom Veiw II 722014.jpg',
+    '/Images/Pool_Images/WEB Image 1 Stone Mason - Living Magazine.jpg'
   ];
 
   const nextSlide = () => {

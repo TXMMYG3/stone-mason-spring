@@ -6,10 +6,10 @@ const SpasShowcase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const spaImages = [
-    '/src/Public/Images/Spas/_DM36104-160 4 WEB FINAL Resize to 18 in wide) Patio Spa.jpg',
-    '/src/Public/Images/Spas/_DM37048-572  4 FINAL WEB 159 Ratio) Night View Two Falls  Rob 11062014.jpg',
-    '/src/Public/Images/Spas/_DM37292..94 4 WEB 159 Ratio FINAL ) Side Entraence 1172014.jpg',
-    '/src/Public/Images/Spas/_DM37564 + 66 4a  FINAL WEB V4 Repair Hot Light Landscape) Red and Blue Falls.jpg'
+    '/Images/Spas/_DM36104-160 4 WEB FINAL Resize to 18 in wide) Patio Spa.jpg',
+    '/Images/Spas/_DM37048-572  4 FINAL WEB 159 Ratio) Night View Two Falls  Rob 11062014.jpg',
+    '/Images/Spas/_DM37292..94 4 WEB 159 Ratio FINAL ) Side Entraence 1172014.jpg',
+    '/Images/Spas/_DM37564 + 66 4a  FINAL WEB V4 Repair Hot Light Landscape) Red and Blue Falls.jpg'
   ];
 
   const nextSlide = () => {
