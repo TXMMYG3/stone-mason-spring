@@ -64,39 +64,58 @@ const stats = [
 const Stats = () => {
   return (
     <section className="py-20 px-4 bg-black">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-      {stats.map((stat, index) => {
-        const Icon = stat.icon;
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
-            className="flex flex-col items-center justify-center p-6 bg-black/30 rounded-lg backdrop-blur-sm"
-          >
-            <motion.div
-              whileHover={{ y: [-2, 2] }}
-              transition={{
-                y: {
-                  duration: 0.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut"
-                }
-              }}
-              className="text-white mb-4"
-            >
-              <Icon size={40} />
-            </motion.div>
-            <div className="mb-2">
-              <AnimatedNumber value={stat.value} />
-            </div>
-            <p className="text-sm text-center text-white">{stat.label}</p>
-          </motion.div>
-        );
-      })}
+      <div className="max-w-6xl mx-auto">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col items-center justify-center p-6 bg-black/30 rounded-lg backdrop-blur-sm"
+              >
+                <motion.div
+                  whileHover={{ y: [-2, 2] }}
+                  transition={{
+                    y: {
+                      duration: 0.5,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut"
+                    }
+                  }}
+                  className="text-white mb-4"
+                >
+                  <Icon size={40} />
+                </motion.div>
+                <div className="mb-2">
+                  <AnimatedNumber value={stat.value} />
+                </div>
+                <p className="text-sm text-center text-white">{stat.label}</p>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Achievements Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center"
+        >
+          <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Three decades of excellence has established us as the premier pool and spa craftsmen in Spring. 
+            With over 800 custom pools and countless satisfied clients, our two-acre nursery provides the perfect 
+            elements to create your personal paradise. When you choose Stone Mason of Spring, you're not just 
+            getting a pool—you're investing in a legacy of artistry, precision, and unparalleled beauty.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

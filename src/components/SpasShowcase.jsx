@@ -26,7 +26,7 @@ const SpasShowcase = () => {
   }, []);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+         <section className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div

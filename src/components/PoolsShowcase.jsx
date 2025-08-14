@@ -26,7 +26,7 @@ const PoolsShowcase = () => {
   }, []);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+         <section className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div

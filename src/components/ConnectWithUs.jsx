@@ -107,27 +107,7 @@ const ConnectWithUs = () => {
            </motion.div>
          </div>
 
-                 {/* Call to Action */}
-         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.5 }}
-           viewport={{ once: true }}
-           className="text-center"
-         >
-           <p className="text-gray-300 mb-6 text-base">
-             Ready to start your project? Schedule a consultation today!
-           </p>
-           <a 
-             href="https://cal.com/stonemason-of-spring/15min" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold text-base transition-all duration-300 transform hover:scale-105 shadow-lg"
-           >
-             <span>Schedule Consultation</span>
-             <ExternalLink size={16} />
-           </a>
-         </motion.div>
+        
       </div>
     </section>
   );
