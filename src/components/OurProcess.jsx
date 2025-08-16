@@ -14,7 +14,7 @@ const OurProcess = () => {
     {
       number: '2',
       title: 'Design & Planning',
-      description: 'Our expert designers create detailed 3D renderings and plans, collaborating closely with you to refine every aspect until it\'s perfect.',
+      description: 'Our expert designers create detailed plans, collaborating closely with you to refine every aspect until it\'s perfect.',
       icon: Palette,
       color: 'from-blue-600 to-cyan-600'
     },

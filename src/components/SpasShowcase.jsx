@@ -106,26 +106,7 @@ const SpasShowcase = () => {
                  </div>
                </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <p className="text-gray-300 mb-6">
-            Ready to add the perfect spa to your outdoor space?
-          </p>
-                           <a 
-                   href="https://cal.com/stonemason-of-spring/15min" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-                 >
-                   Start Your Journey Today
-                 </a>
-        </motion.div>
+
       </div>
     </section>
   );
