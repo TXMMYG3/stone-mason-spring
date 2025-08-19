@@ -40,10 +40,12 @@ const GalleryImage = memo(({ image, index, onClick }) => {
             <img 
               src={image.src} 
               alt={image.alt}
-              className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
-              loading="eager"
-              onError={handleImageError}
-              onLoad={handleImageLoad}
+              className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+              decoding="async"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
             />
           ) : (
             <div className="w-full h-full bg-gray-800 flex items-center justify-center">

@@ -66,11 +66,16 @@ const SpasShowcase = () => {
                          key={index}
                          className="relative flex-shrink-0 w-full h-full"
                        >
-                         <img
-                           src={image}
-                           alt={`Luxury Spa Design ${index + 1}`}
-                           className="w-full h-full object-cover"
-                         />
+                         <img 
+                          src={image} 
+                          alt={`Relaxing Spa Design ${index + 1}`}
+                          className="w-full h-full object-cover rounded-lg"
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
                          {/* Overlay */}
                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                        </div>

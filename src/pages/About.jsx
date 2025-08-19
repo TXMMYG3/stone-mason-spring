@@ -25,6 +25,11 @@ const About = () => {
                     src="/Images/Joe-DiPaulo.jpg" 
                     alt="Joe DiPaulo - Founder of Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </motion.div>
                 <div className="w-full md:w-1/2">
@@ -57,6 +62,11 @@ const About = () => {
                     src="/Images/Tammy-Barnett.jpeg" 
                     alt="Tammy Barnett - Owner/Operator of Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </motion.div>
                 <div className="w-full md:w-1/2">
@@ -87,14 +97,19 @@ const About = () => {
                 >
                   <img 
                     src="/Images/Aurelio.jpeg" 
-                    alt="Aurelio - Foreman at Stone Mason of Spring" 
+                    alt="Aurelio Jimenez- Foreman at Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </motion.div>
                 <div className="w-full md:w-1/2">
-                  <h2 className="text-2xl font-semibold mb-4 text-blue-400">Aurelio - Foreman</h2>
+                  <h2 className="text-2xl font-semibold mb-4 text-blue-400">Aurelio Jimenez - Foreman</h2>
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    Aurelio has been with Stone Mason of Spring for over 12 years, serving as our lead foreman and master craftsman. His expertise in stone work and pool construction is unmatched in the industry.
+                    Aurelio has been with Stone Mason of Spring for over 28 years, serving as our lead foreman and master craftsman. His expertise in stone work and pool construction is unmatched in the industry.
                   </p>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import OptimizedImage from './OptimizedImage';
 import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -9,14 +10,12 @@ const Hero = () => {
                    {/* Background Image */}
              <div className="absolute inset-0 z-0">
                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90" />
-               <motion.img
-                 src="/Images/Hero_image_Stone.jpg"
-                 alt="Stone Mason of Spring - Luxury Pool and Garden Design"
-                 className="w-full h-full object-cover"
+               <OptimizedImage 
+                 src="/Images/Hero_image_Stone.jpg" 
+                 alt="Stone Mason of Spring Hero Background"
+                 className="absolute inset-0 w-full h-full object-cover"
+                 priority={true}
                  loading="eager"
-                 initial={{ opacity: 0, scale: 1.1 }}
-                 animate={{ opacity: 1, scale: 1 }}
-                 transition={{ duration: 1.5, ease: "easeOut" }}
                />
              </div>
 
