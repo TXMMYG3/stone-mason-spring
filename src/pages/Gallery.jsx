@@ -3,15 +3,24 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { X, ZoomIn } from 'lucide-react';
 
-// Memoized image component for better performance
+// Advanced optimized image component with intersection observer
 const GalleryImage = memo(({ image, index, onClick }) => {
-  const [shouldLoad, setShouldLoad] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   
-  // Load image immediately when component mounts
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+    rootMargin: '50px'
+  });
+
+  // Set inView state when intersection observer triggers
   useEffect(() => {
-    setShouldLoad(true);
-  }, []);
+    if (inView) {
+      setIsInView(true);
+    }
+  }, [inView]);
 
   const handleImageError = () => {
     console.error(`Failed to load image: ${image.src}`);
@@ -19,33 +28,44 @@ const GalleryImage = memo(({ image, index, onClick }) => {
   };
 
   const handleImageLoad = () => {
-    console.log(`Successfully loaded image: ${image.src}`);
+    setImageLoaded(true);
   };
 
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={{ 
         opacity: 1, 
         y: 0,
-        transition: { delay: index * 0.03, duration: 0.5 }
+        transition: { delay: index * 0.02, duration: 0.4 }
       }}
       whileHover={{ scale: 1.03 }}
       className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group"
       onClick={onClick}
     >
-      {shouldLoad && (
+      {/* Loading skeleton */}
+      {!imageLoaded && !imageError && (
+        <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
+      
+      {/* Actual image - only load when in view */}
+      {isInView && (
         <>
           {!imageError ? (
             <img 
               src={image.src} 
               alt={image.alt}
-              className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+              className={`w-full h-full object-cover rounded-lg transition-all duration-500 ${
+                imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+              }`}
               loading="lazy"
               decoding="async"
-              onError={(e) => {
-                e.target.style.display = 'none';
-              }}
+              fetchPriority={index < 8 ? "high" : "low"}
+              onError={handleImageError}
+              onLoad={handleImageLoad}
             />
           ) : (
             <div className="w-full h-full bg-gray-800 flex items-center justify-center">
@@ -55,14 +75,16 @@ const GalleryImage = memo(({ image, index, onClick }) => {
               </div>
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <div className="flex items-center justify-between w-full">
-              <p className="text-white text-sm font-medium">{image.alt}</p>
-              <ZoomIn className="text-white w-5 h-5" />
-            </div>
-          </div>
         </>
       )}
+      
+      {/* Hover overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+        <div className="flex items-center justify-between w-full">
+          <p className="text-white text-sm font-medium">{image.alt}</p>
+          <ZoomIn className="text-white w-5 h-5" />
+        </div>
+      </div>
     </motion.div>
   );
 });
@@ -103,7 +125,6 @@ const Gallery = () => {
     { src: '/Images/Pools_Tab_Extras/_DM37323 4 FINAL) NRS Water Cave 11072017 Rob& Heidi.jpg', alt: 'Water Cave Feature', category: 'pools' },
     { src: '/Images/Pools_Tab_Extras/_DM37299 _ 524 4aaaaa FINAL WEB Levels SH) Water Cavge Night Falls Rob & Heidi.jpg', alt: 'Water Cave Night Falls', category: 'pools' },
     { src: '/Images/Pools_Tab_Extras/IMG_1623-Neal_Cave.jpg', alt: 'Neal Cave Pool Feature', category: 'pools' },
-    { src: '/Images/Pools_Tab_Extras/IMG_1263 Heflin - Pebbled Steps.jpg', alt: 'Pebbled Steps Design', category: 'pools' },
     { src: '/Images/Pools_Tab_Extras/IMG_1299 Pool - Barbara and Falls.jpg', alt: 'Barbara and Falls Pool', category: 'pools' },
     { src: '/Images/Pools_Tab_Extras/IMG_1049 Ables Falls.jpg', alt: 'Ables Falls Feature', category: 'pools' },
     { src: '/Images/Pools_Tab_Extras/IMG_1189 Heflin - Barbara on Falls.jpg', alt: 'Barbara on Falls', category: 'pools' },
@@ -228,13 +249,34 @@ const Gallery = () => {
     setSelectedImage(null);
   }, []);
 
-  // Preload images when category changes
+  // Aggressive preloading strategy for better performance
   useEffect(() => {
-    const imagesToPreload = filteredImages.slice(0, 12); // Preload first 12 images
-    imagesToPreload.forEach(image => {
+    // Preload first 16 images immediately
+    const imagesToPreload = filteredImages.slice(0, 16);
+    imagesToPreload.forEach((image, index) => {
       const img = new Image();
       img.src = image.src;
+      img.loading = 'eager';
+      img.decoding = 'async';
     });
+
+    // Preload remaining images with a delay to avoid blocking
+    if (filteredImages.length > 16) {
+      const remainingImages = filteredImages.slice(16);
+      const preloadRemaining = () => {
+        remainingImages.forEach((image, index) => {
+          setTimeout(() => {
+            const img = new Image();
+            img.src = image.src;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+          }, index * 100); // Stagger loading by 100ms
+        });
+      };
+      
+      // Start preloading remaining images after a short delay
+      setTimeout(preloadRemaining, 500);
+    }
   }, [selectedCategory, filteredImages]);
   return (
     <div className="min-h-screen bg-black text-white pt-24 pb-12">

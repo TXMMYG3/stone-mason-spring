@@ -25,11 +25,6 @@ const About = () => {
                     src="/Images/Joe-DiPaulo.jpg" 
                     alt="Joe DiPaulo - Founder of Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                    }}
                   />
                 </motion.div>
                 <div className="w-full md:w-1/2">
@@ -62,11 +57,6 @@ const About = () => {
                     src="/Images/Tammy-Barnett.jpeg" 
                     alt="Tammy Barnett - Owner/Operator of Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                    }}
                   />
                 </motion.div>
                 <div className="w-full md:w-1/2">
@@ -99,11 +89,6 @@ const About = () => {
                     src="/Images/Aurelio.jpeg" 
                     alt="Aurelio Jimenez- Foreman at Stone Mason of Spring" 
                     className="w-full h-auto object-cover rounded-lg"
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                    }}
                   />
                 </motion.div>
                 <div className="w-full md:w-1/2">

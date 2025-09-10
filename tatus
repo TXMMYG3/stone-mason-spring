@@ -1,0 +1,5 @@
+[33m6d2851d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Add image performance optimizations: lazy loading, preloading, error handling, and loading states
+[33m9d89474[m Update process description and remove CTA buttons from pools/spas sections
+[33mb0c84f2[m Fix Netlify image deployment: move all images from src/Public to public folder and update all paths
+[33m1a7935d[m Add continuous carousel animations: smooth horizontal scrolling across entire section width for pools and spas
+[33m7996303[m Final visual enhancements: darker hero overlay, white title, smooth carousel animations for pools and spas
