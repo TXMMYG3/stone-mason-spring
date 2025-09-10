@@ -249,20 +249,21 @@ const Gallery = () => {
     setSelectedImage(null);
   }, []);
 
-  // Aggressive preloading strategy for better performance
+  // Ultra-aggressive preloading strategy for all categories
   useEffect(() => {
-    // Preload first 16 images immediately
-    const imagesToPreload = filteredImages.slice(0, 16);
+    // Preload first 20 images immediately for faster loading
+    const imagesToPreload = filteredImages.slice(0, 20);
     imagesToPreload.forEach((image, index) => {
       const img = new Image();
       img.src = image.src;
       img.loading = 'eager';
       img.decoding = 'async';
+      img.fetchPriority = index < 8 ? 'high' : 'auto';
     });
 
-    // Preload remaining images with a delay to avoid blocking
-    if (filteredImages.length > 16) {
-      const remainingImages = filteredImages.slice(16);
+    // Preload remaining images with optimized staggering
+    if (filteredImages.length > 20) {
+      const remainingImages = filteredImages.slice(20);
       const preloadRemaining = () => {
         remainingImages.forEach((image, index) => {
           setTimeout(() => {
@@ -270,12 +271,12 @@ const Gallery = () => {
             img.src = image.src;
             img.loading = 'lazy';
             img.decoding = 'async';
-          }, index * 100); // Stagger loading by 100ms
+          }, index * 50); // Faster staggering - 50ms instead of 100ms
         });
       };
       
-      // Start preloading remaining images after a short delay
-      setTimeout(preloadRemaining, 500);
+      // Start preloading remaining images immediately (no delay)
+      preloadRemaining();
     }
   }, [selectedCategory, filteredImages]);
   return (
